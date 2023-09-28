@@ -48,10 +48,14 @@ export default function Auth() {
       >
         <h1 className="h-300">Sign Up</h1>
         <div className="signupModal__form">
-          <Input id="fullname" placeholder="Full Name" type="text" />
-          <Input id="email" placeholder="Email Address" type="email" />
-          <Input id="phone" placeholder="Phone Number" type="text" />
-          <Input id="password" placeholder="Enter Password" type="password" />
+          <Input id="signup-fullname" placeholder="Full Name" type="text" />
+          <Input id="signup-email" placeholder="Email Address" type="email" />
+          <Input id="signup-phone" placeholder="Phone Number" type="text" />
+          <Input
+            id="signup-password"
+            placeholder="Enter Password"
+            type="password"
+          />
           <button className="btn-pry-bg">Sign Up</button>
         </div>
 
@@ -85,8 +89,12 @@ export default function Auth() {
       <div className={login ? "signupModal active login" : "signupModal login"}>
         <h1 className="h-300">Sign In</h1>
         <div className="signupModal__form">
-          <Input id="email" placeholder="Email Address" type="email" />
-          <Input id="password" placeholder="Enter Password" type="password" />
+          <Input id="login-email" placeholder="Email Address" type="email" />
+          <Input
+            id="login-password"
+            placeholder="Enter Password"
+            type="password"
+          />
           <div className="forgot-pass">Forget Password?</div>
           <button className="btn-pry-bg">Sign In</button>
         </div>
