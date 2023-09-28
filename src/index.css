@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: "Raleway", "Red Hat Display", sans-serif;
+  --pry-clr: #33a480;
+  --neutral-clr: rgba(233, 233, 233, 0.38);
+  --accent-clr: #f8fcfa;
+  --danger-clr: #f81b3a;
+  --black-clr: rgba(48, 45, 45, 1);
+  --text-clr: #5c5c5c;
+}
+
+.h-100,
+.h-200,
+.h-300 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: var(--black-clr);
+}
+
+.h-300 {
+  font-size: 24px;
+}
+
+.h-200 {
+  font-size: 22px;
+}
+
+.h-100 {
+  font-size: 18px;
+}
+
+.btn-pry-bg {
+  color: white;
+  background: var(--pry-clr);
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(21, 35, 25, 0.05);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 55px;
+  border: none;
+  outline: none;
+}
+
+.btn-pry-sm {
+  color: white;
+  background: var(--pry-clr);
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(21, 35, 25, 0.05);
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 50px;
+  padding: 20px;
+  border: none;
+  outline: none;
+}
+
+.btn-warning {
+  background: var(--neutral-clr);
+  color: var(--danger-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 18px;
+  height: 50px;
+  padding: 20px;
+}
+
+.icon-sm {
+  font-size: 20px;
+  color: var(--black-clr);
+}
+
+.text-body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text-clr);
+}

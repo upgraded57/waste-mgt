@@ -1,0 +1,14 @@
+.topbar {
+  position: relative;
+  padding: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar__back-icon {
+  position: absolute;
+  left: 4vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
