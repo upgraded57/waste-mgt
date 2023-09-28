@@ -6,3 +6,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.home__logo {
+  width: 200px;
+}
+
+.home__logo img {
+  width: 100%;
+}

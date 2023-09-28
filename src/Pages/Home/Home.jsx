@@ -1,10 +1,12 @@
 import "./home.css";
-import logo from "../../../public/images/logo.svg";
+import logo from "../../../public/images/logo.png";
 
 export default function Home() {
   return (
     <div className="home">
-      <img src={logo} alt="" />
+      <div className="home__logo">
+        <img src={logo} alt="" />
+      </div>
     </div>
   );
 }
