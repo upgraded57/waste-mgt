@@ -23,7 +23,7 @@ export default function Onboarding() {
     <div className="onboarding">
       <div
         className={
-          overlay ? "onboarding__overlay active" : "onboarding__overlay"
+          overlay ? "onboarding__overlay" : "onboarding__overlay active"
         }
       >
         <div className="onboarding__overlay-logo">
