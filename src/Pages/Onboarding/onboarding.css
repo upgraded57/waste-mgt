@@ -1,0 +1,125 @@
+.onboarding__overlay {
+  position: fixed;
+  display: none;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--pry-clr);
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s linear;
+  z-index: 1000;
+}
+
+.onboarding__overlay.active {
+  display: flex;
+}
+
+.onboarding__overlay-logo {
+  width: 200px;
+}
+
+.onboarding__overlay-logo img {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.onboarding__screens {
+  width: min(500px, 100vw);
+  overflow-x: scroll;
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+.onboarding__screen {
+  position: relative;
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  padding: 0 6vw;
+  scroll-snap-align: center;
+}
+
+.onboarding__screen-overlay {
+  width: 800px;
+  height: 800px;
+  background: var(--accent-clr);
+  border-radius: 50%;
+  position: absolute;
+  top: -50vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.onboarding__screen-content-img {
+  width: 250px;
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onboarding__screen-content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.onboarding__action-btns {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6vw;
+}
+
+.onboarding__action-btns-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.onboarding__action-btns-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(196, 196, 196, 1);
+  cursor: pointer;
+}
+
+.onboarding__action-btns-dots span.active {
+  width: 40px;
+  border-radius: 10px;
+  background: var(--pry-clr);
+}
+
+.onboarding__action-btns-skip {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--pry-clr);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.onboarding__action-btns button {
+  height: 45px !important;
+}
