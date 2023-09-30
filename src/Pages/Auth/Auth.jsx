@@ -5,8 +5,10 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Auth() {
+  const navigate = useNavigate();
   const [signup, setSignup] = useState(false);
   const [login, setLogin] = useState(false);
 
@@ -78,7 +80,7 @@ export default function Auth() {
           <p className="text-body">Already have an account?</p>
           <span
             className="text-bold"
-            style={{ color: "var(--pry-clr)" }}
+            style={{ color: "var(--pry-clr)", cursor: "pointer" }}
             onClick={showLogin}
           >
             Sign In
@@ -95,7 +97,12 @@ export default function Auth() {
             placeholder="Enter Password"
             type="password"
           />
-          <div className="forgot-pass">Forget Password?</div>
+          <div
+            className="forgot-pass"
+            onClick={() => navigate("/password/recovery")}
+          >
+            Forget Password?
+          </div>
           <button className="btn-pry-bg">Sign In</button>
         </div>
 
@@ -118,7 +125,7 @@ export default function Auth() {
           <p className="text-body">Don't have an account?</p>
           <span
             className="text-bold"
-            style={{ color: "var(--pry-clr)" }}
+            style={{ color: "var(--pry-clr)", cursor: "pointer" }}
             onClick={showSignup}
           >
             Sign Up

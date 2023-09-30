@@ -1,7 +1,9 @@
 .modal {
   position: fixed;
   inset: 0;
-  width: 100vw;
+  width: min(500px, 100vw);
+  left: 50%;
+  transform: translateX(-50%);
   height: 100vh;
 }
 
@@ -13,7 +15,7 @@
 }
 
 .modal__box {
-  padding: 20px;
+  padding: 50px 20px;
   background: white;
   position: absolute;
   width: 90%;
@@ -25,10 +27,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   text-align: center;
 }
 
 .modal__box img {
-  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 110px;
+}
+
+.modal__box p {
+  font-size: 14px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.modal__box h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal__box button {
+  margin-top: 30px !important;
 }

@@ -2,8 +2,7 @@ import { useState } from "react";
 import "./input.css";
 import { useEffect } from "react";
 
-export default function Input({ id, placeholder, type }) {
-  console.log(id);
+export default function Input({ id, placeholder, type, setValue }) {
   const [inputField, setInputField] = useState(null);
   const [inputLabel, setInputLabel] = useState(null);
 
@@ -24,12 +23,16 @@ export default function Input({ id, placeholder, type }) {
     };
   }
 
+  const setInputValue = (e) => {
+    setValue(e.target.value);
+  };
+
   return (
     <div className="input">
       <label htmlFor={id} id={"label" + id}>
         {placeholder}
       </label>
-      <input type={type} id={id} />
+      <input type={type} id={id} onChange={setInputValue} />
     </div>
   );
 }
