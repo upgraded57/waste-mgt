@@ -1,13 +1,15 @@
 .navbar {
-  width: 100%;
+  width: min(500px, 100vw);
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4vw;
+  padding: 0 40px;
   background: white;
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   box-shadow: 0px -5px 20px rgba(96, 100, 112, 0.1);
 }
 
@@ -17,8 +19,14 @@
   align-items: center;
   justify-content: center;
   font-family: "Raleway", sans-serif;
+  cursor: pointer;
 }
 
 .navbar__nav span {
   font-size: 10px;
+}
+
+.navbar__nav.active,
+.navbar__nav.active .icon-sm {
+  color: var(--pry-clr);
 }

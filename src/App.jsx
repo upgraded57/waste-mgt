@@ -10,6 +10,7 @@ const PasswordRecovery = React.lazy(() =>
 const PasswordReset = React.lazy(() =>
   import("./Pages/PasswordReset/PasswordReset")
 );
+const Search = React.lazy(() => import("./Pages/Search/Search"));
 
 function App() {
   return (
@@ -53,6 +54,14 @@ function App() {
             element={
               <Suspense fallback={<Loader type="placeholder" />}>
                 <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/search/:search_query"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Search />
               </Suspense>
             }
           />
