@@ -1,0 +1,50 @@
+.notifications {
+  padding: 4%;
+}
+
+.notification {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(51, 164, 128, 0.2);
+  border-radius: 5px;
+}
+
+.notification-header-icon .icon {
+  font-size: 18px;
+  color: rgba(51, 164, 128, 1);
+  display: flex;
+}
+
+.notification-body {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.notification-body p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.notification-body-time {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}

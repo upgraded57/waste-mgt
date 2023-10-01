@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Loader from "./Components/Loader/Loader";
+
 const Onboarding = React.lazy(() => import("./Pages/Onboarding/Onboarding"));
 const Home = React.lazy(() => import("./Pages/Home/Home"));
 const Auth = React.lazy(() => import("./Pages/Auth/Auth"));
@@ -10,7 +11,11 @@ const PasswordRecovery = React.lazy(() =>
 const PasswordReset = React.lazy(() =>
   import("./Pages/PasswordReset/PasswordReset")
 );
+const Notifications = React.lazy(() =>
+  import("./Pages/Notifications/Notifications")
+);
 const Search = React.lazy(() => import("./Pages/Search/Search"));
+const Pickups = React.lazy(() => import("./Pages/Pickups/Pickups"));
 
 function App() {
   return (
@@ -62,6 +67,22 @@ function App() {
             element={
               <Suspense fallback={<Loader type="placeholder" />}>
                 <Search />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/notifications"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Notifications />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/pickups"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Pickups />
               </Suspense>
             }
           />

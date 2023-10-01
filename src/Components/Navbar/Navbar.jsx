@@ -37,7 +37,7 @@ export default function Navbar() {
             ? "navbar__nav active"
             : "navbar__nav"
         }
-        // onClick={() => navigate("/pickups")}
+        onClick={() => navigate("/pickups")}
       >
         <SlTrash className="icon-sm" />
         <span>Pickups</span>

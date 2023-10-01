@@ -7,9 +7,11 @@ import { useNavigate } from "react-router-dom";
 
 import mapImg from "../../assets/images/map.jpg";
 import { useState } from "react";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchOpen, setSearchOpen] = useState(false);
   const navigate = useNavigate();
 
   const search = (e) => {
@@ -42,6 +44,8 @@ export default function Home() {
               type="text"
               placeholder="Search for nearby centers"
               onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setSearchOpen(true)}
+              onBlur={() => setSearchOpen(false)}
             />
           </form>
         </div>
@@ -51,6 +55,41 @@ export default function Home() {
         </div>
         <div className="location-dot">
           <BiCurrentLocation />
+        </div>
+      </div>
+
+      <div
+        className={
+          searchOpen ? "home__recent-search active" : "home__recent-search"
+        }
+      >
+        <div className="home__recent-search-top">
+          <p>Recent</p>
+          <span>Clear All</span>
+        </div>
+        <div className="home__recent-search-list">
+          <ul>
+            <li>
+              Garden City
+              <AiOutlineCloseCircle className="icon" />
+            </li>
+            <li>
+              Local center
+              <AiOutlineCloseCircle className="icon" />
+            </li>
+            <li>
+              Phc freshness
+              <AiOutlineCloseCircle className="icon" />
+            </li>
+            <li>
+              Some city name
+              <AiOutlineCloseCircle className="icon" />
+            </li>
+            <li>
+              Port Harcourt
+              <AiOutlineCloseCircle className="icon" />
+            </li>
+          </ul>
         </div>
       </div>
 
