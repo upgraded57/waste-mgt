@@ -48,7 +48,7 @@ export default function Navbar() {
             ? "navbar__nav active"
             : "navbar__nav"
         }
-        // onClick={() => navigate("/account")}
+        onClick={() => navigate("/account")}
       >
         <AiOutlineUser className="icon-sm" />
         <span>Account</span>

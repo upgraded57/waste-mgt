@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./input.css";
 import { useEffect } from "react";
 
-export default function Input({ id, placeholder, type, setValue }) {
+export default function Input({ id, placeholder, type, inputMode, setValue }) {
   const [inputField, setInputField] = useState(null);
   const [inputLabel, setInputLabel] = useState(null);
 
@@ -32,7 +32,12 @@ export default function Input({ id, placeholder, type, setValue }) {
       <label htmlFor={id} id={"label" + id}>
         {placeholder}
       </label>
-      <input type={type} id={id} onChange={setInputValue} />
+      <input
+        type={type}
+        id={id}
+        onChange={setInputValue}
+        inputMode={inputMode}
+      />
     </div>
   );
 }

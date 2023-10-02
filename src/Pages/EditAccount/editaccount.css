@@ -1,0 +1,39 @@
+.editaccount {
+  padding: 4%;
+}
+
+.editaccount__avatar {
+  width: 70px;
+  height: 70px;
+  margin-inline: auto;
+  margin-block: 20px;
+  position: relative;
+}
+
+.editaccount__avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.editaccount__avatar-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--pry-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

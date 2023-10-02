@@ -1,0 +1,83 @@
+.account {
+  padding: 4%;
+  color: var(--black-clr);
+}
+
+.account__top {
+  width: 90%;
+  margin-inline: auto;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c8c2c2;
+}
+
+.account__top-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+.account__top-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.account__top p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.account__navs {
+  margin-top: 40px;
+}
+
+.account__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.account__nav.logout {
+  color: #f81b3a;
+}
+
+.account__nav.logout .icon {
+  color: #f81b3a;
+}
+
+.account__nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.account__nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account__nav-right p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.account__nav-left p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 20px;
+  display: flex;
+  color: var(--text-clr);
+}

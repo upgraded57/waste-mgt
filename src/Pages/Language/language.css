@@ -1,0 +1,26 @@
+.language {
+  padding: 4%;
+}
+
+.language__options {
+  padding-block: 10px;
+}
+
+.language__options h2 {
+  margin-bottom: 10px;
+}
+
+.language__options.suggestion {
+  border-bottom: 1px solid #c8c2c2;
+}
+
+.language__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
+}
+
+.language__option label {
+  font-weight: 500 !important;
+}

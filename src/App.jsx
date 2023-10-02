@@ -16,6 +16,17 @@ const Notifications = React.lazy(() =>
 );
 const Search = React.lazy(() => import("./Pages/Search/Search"));
 const Pickups = React.lazy(() => import("./Pages/Pickups/Pickups"));
+const CancelPickup = React.lazy(() =>
+  import("./Pages/CancelPickup/CancelPickup")
+);
+const Account = React.lazy(() => import("./Pages/Account/Account"));
+const EditAccount = React.lazy(() => import("./Pages/EditAccount/EditAccount"));
+const ChangePassword = React.lazy(() =>
+  import("./Pages/ChangePassword/ChangePassword")
+);
+const Language = React.lazy(() => import("./Pages/Language/Language"));
+const Payment = React.lazy(() => import("./Pages/Payment/Payment"));
+const NewCard = React.lazy(() => import("./Pages/NewCard/NewCard"));
 
 function App() {
   return (
@@ -83,6 +94,62 @@ function App() {
             element={
               <Suspense fallback={<Loader type="placeholder" />}>
                 <Pickups />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/pickups/cancel"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <CancelPickup />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/account"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Account />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/account/edit"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <EditAccount />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/account/password"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <ChangePassword />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/account/language"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Language />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/account/cards"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Payment />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/account/cards/new"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <NewCard />
               </Suspense>
             }
           />
