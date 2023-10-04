@@ -25,6 +25,10 @@ export default function Auth() {
     }
     setSignup(true);
   };
+
+  const signIn = () => {
+    navigate("/");
+  };
   return (
     <>
       <div className="auth">
@@ -58,7 +62,9 @@ export default function Auth() {
             placeholder="Enter Password"
             type="password"
           />
-          <button className="btn-pry-bg">Sign Up</button>
+          <button className="btn-pry-bg" onClick={signIn}>
+            Sign Up
+          </button>
         </div>
 
         <div className="signupModal__options">
@@ -103,7 +109,9 @@ export default function Auth() {
           >
             Forget Password?
           </div>
-          <button className="btn-pry-bg">Sign In</button>
+          <button className="btn-pry-bg" onClick={signIn}>
+            Sign In
+          </button>
         </div>
 
         <div className="signupModal__options">

@@ -12,9 +12,12 @@ import {
   BsShieldExclamation,
 } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Account() {
   const navigate = useNavigate();
+
+  const [logoutModalActive, setLogoutModalActive] = useState(false);
   return (
     <>
       <Topbar header="Profile" />
@@ -95,7 +98,10 @@ export default function Account() {
               <AiOutlineRight className="icon" />
             </div>
           </div>
-          <div className="account__nav logout">
+          <div
+            className="account__nav logout"
+            onClick={() => setLogoutModalActive(true)}
+          >
             <div className="account__nav-left">
               <FiLogOut className="icon" />
               <p>Logout</p>
@@ -104,6 +110,35 @@ export default function Account() {
         </div>
       </div>
       <Navbar />
+      <div
+        className={logoutModalActive ? "logout-popup active" : "logout-popup"}
+      >
+        <div
+          className="logout-popup__overlay"
+          onClick={() => setLogoutModalActive(false)}
+        ></div>
+        <div className="logout-popup__box">
+          <span onClick={() => setLogoutModalActive(false)}></span>
+          <h2>Logout</h2>
+          <p>Are you sure you want to log out?</p>
+          <div className="logout-popup__btns">
+            <button
+              type="button"
+              className="btn-pry-sm cancel-btn"
+              onClick={() => setLogoutModalActive(false)}
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              className="btn-pry-sm"
+              onClick={() => navigate("/auth")}
+            >
+              Yes, Logout
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
