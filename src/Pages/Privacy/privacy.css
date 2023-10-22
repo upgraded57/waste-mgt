@@ -1,0 +1,13 @@
+.privacy {
+  padding: 4vw;
+}
+
+.statement {
+  margin-bottom: 20px;
+}
+
+.statement h3 {
+  margin-bottom: 10px;
+  font-family: "Red Hat Display", sans-serif !important;
+  font-weight: 500 !important;
+}

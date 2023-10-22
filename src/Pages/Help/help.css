@@ -1,0 +1,69 @@
+.drop-down {
+  width: 100%;
+  margin-bottom: 20px;
+  max-height: 30px;
+  transform-origin: top;
+  transition: 1s linear;
+  overflow: hidden;
+}
+
+.drop-down.active {
+  max-height: none;
+}
+
+.drop-down__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drop-down hr {
+  margin-block: 10px;
+}
+
+.drop-down__header h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.drop-down__header span {
+  color: var(--pry-clr);
+  transform: rotate(180deg);
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.drop-down.active .drop-down__header span {
+  transform: rotate(0deg);
+}
+
+.drop-down__content {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.2s;
+}
+
+.drop-down.active .drop-down__content {
+  transform: scaleY(1);
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.contact span {
+  font-size: 20px;
+  color: var(--pry-clr);
+  display: flex;
+}
+
+.contact p {
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+}

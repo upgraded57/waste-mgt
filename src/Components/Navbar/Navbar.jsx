@@ -26,7 +26,7 @@ export default function Navbar() {
             ? "navbar__nav active"
             : "navbar__nav"
         }
-        // onClick={() => navigate("/schedule")}
+        onClick={() => navigate("/schedule")}
       >
         <RxCalendar className="icon-sm" />
         <span>Schedule</span>

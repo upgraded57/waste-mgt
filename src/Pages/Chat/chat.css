@@ -1,0 +1,119 @@
+.chat-page {
+  padding: 4vw;
+}
+
+.chat-page__time {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.chat-page__time span {
+  font-size: 10px;
+  font-weight: 400;
+  font-family: "Red Hat Display", sans-serif;
+  padding: 6px 10px;
+  background: var(--neutral-clr);
+}
+
+.messages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: calc(100vh-200px);
+  overflow-y: scroll;
+}
+
+.message {
+  padding: 15px 10px;
+  display: flex;
+  max-width: 80%;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 15px;
+}
+
+.message p {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.message small {
+  font-size: 10px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+}
+
+.message.received {
+  background: var(--neutral-clr);
+  border-top-left-radius: 0;
+}
+
+.message.sent {
+  margin-left: auto;
+  background: rgba(12, 186, 112, 0.7);
+  color: white;
+  border-top-right-radius: 0;
+}
+
+.chat-page_form {
+  padding: 20px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+}
+
+.chat-page_form form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.chat-page_form form .inputfield {
+  width: 100%;
+  padding-inline: 10px;
+  height: 50px;
+  background: var(--neutral-clr);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.chat-page_form form .inputfield input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  background: transparent;
+  border: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.chat-page_form form .inputfield span {
+  font-size: 15px;
+  color: grey;
+}
+
+.chat-page_form form button {
+  font-size: 20px;
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  color: white;
+  background: var(--pry-clr);
+}

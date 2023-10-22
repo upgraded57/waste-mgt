@@ -27,6 +27,10 @@ const ChangePassword = React.lazy(() =>
 const Language = React.lazy(() => import("./Pages/Language/Language"));
 const Payment = React.lazy(() => import("./Pages/Payment/Payment"));
 const NewCard = React.lazy(() => import("./Pages/NewCard/NewCard"));
+const Privacy = React.lazy(() => import("./Pages/Privacy/Privacy"));
+const Help = React.lazy(() => import("./Pages/Help/Help"));
+const Chat = React.lazy(() => import("./Pages/Chat/Chat"));
+const Schedule = React.lazy(() => import("./Pages/Schedule/Schedule"));
 
 function App() {
   return (
@@ -150,6 +154,38 @@ function App() {
             element={
               <Suspense fallback={<Loader type="placeholder" />}>
                 <NewCard />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/account/privacy"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Privacy />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/account/help"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Help />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/customer-service"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Chat />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/schedule"
+            element={
+              <Suspense fallback={<Loader type="placeholder" />}>
+                <Schedule />
               </Suspense>
             }
           />

@@ -69,7 +69,10 @@ export default function Account() {
             </div>
           </div>
           <div className="account__nav">
-            <div className="account__nav-left">
+            <div
+              className="account__nav-left"
+              onClick={() => navigate("/account/help")}
+            >
               <BsChatQuote className="icon" />
               <p>Help Center</p>
             </div>
@@ -90,7 +93,10 @@ export default function Account() {
             </div>
           </div>
           <div className="account__nav">
-            <div className="account__nav-left">
+            <div
+              className="account__nav-left"
+              onClick={() => navigate("/account/privacy")}
+            >
               <BsShieldCheck className="icon" />
               <p>Privacy Policy</p>
             </div>
